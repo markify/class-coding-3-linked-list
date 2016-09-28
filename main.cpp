@@ -126,9 +126,9 @@ struct Node *reverse(struct Node **head) {
     me = child;
     child = child->next;
   }
-  me->next = parent;
-  *head = me;
-  return *head;
+    me->next = parent;
+    *head = me;
+    return *head;
 }
 
 /* Creating a copy of a linked list */
