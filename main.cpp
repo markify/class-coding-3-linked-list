@@ -39,7 +39,7 @@ void addNode(struct Node *head, int n) {
             current->next = newNode;
             return;
         }
-        else
+            else
             current = current->next;
     }
 }
@@ -207,7 +207,7 @@ int main() {
   cout << "The list is copied\n";
   copyLinkedList(head,&newHead);
   display(newHead);
-
+/*
   cout << "Comparing the two lists...\n";
   cout << "Are the two lists same?\n";
   if(compareLinkedList(head,newHead))
@@ -234,6 +234,6 @@ int main() {
   cout << "Deleting the copied list\n";
   deleteLinkedList(&newHead);
   display(newHead);
-
+   */
   return 0;
 }
