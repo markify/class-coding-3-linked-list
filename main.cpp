@@ -29,17 +29,19 @@ struct Node {
 void addNode(struct Node *head, int n) {
   //TODO - Implement this function.
     //TODO - Implement this function.
-    Node *current;
-    current = head;
-    while (current->next != NULL){
-        current = current->next;
+
+    Node *newNode = new Node;
+    Node *current = head;
+    while (current) {
+        if (current->next != NULL) {
+            current = current->next;
+        }
+        newNode->data = n;
+        newNode->next = NULL;
+        current->next = newNode;
+        return;
 
     }
-
-    Node *newNode = current->next;
-
-    newNode->data = n;
-    newNode->next = NULL;
 
 }
 
@@ -50,10 +52,8 @@ void addNode(struct Node *head, int n) {
  */
 void insertFront(struct Node **head, int n) {
   //TODO
-  Node *current;
-  current = *head;
-  Node *newNode;
-  newNode -> next = current;
+  Node *newNode = new Node;
+  newNode -> next = *head;
   newNode -> data = n;
   *head = newNode;
 }
@@ -82,7 +82,7 @@ void display(struct Node *head) {
 struct Node *searchNode(struct Node *head, int n) {
   //TODO
   Node *thisNode = head;         //first location in front of node
-  while(thisNode) {              //go to current node
+  while(thisNode) {
     if(thisNode->data == n)     //if given data is at this node, return
       return thisNode;
     else                        // else go to next node
@@ -98,6 +98,7 @@ struct Node *searchNode(struct Node *head, int n) {
  */
 bool deleteNode(struct Node **head, Node *ptrDel) {
   //TODO
+
   return false;
 }
 
@@ -167,7 +168,7 @@ int main() {
 
   initNode(head,10);
   display(head);
-/*
+
   addNode(head,20);
   display(head);
 
@@ -182,7 +183,7 @@ int main() {
 
   insertFront(&head,5);
   display(head);
-
+/*
   int numDel = 5;
   Node *ptrDelete = searchNode(head,numDel);
   if(deleteNode(&head,ptrDelete))
