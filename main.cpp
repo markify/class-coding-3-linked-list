@@ -47,6 +47,7 @@ void insertFront(struct Node **head, int n) {
  */
 void display(struct Node *head) {
   //TODO
+  node *temp=head;
   while(temp!=NULL){
     cout << temp->data;
     if(temp->next!=NULL){
@@ -54,7 +55,7 @@ void display(struct Node *head) {
     }
     delete(temp);
   }
-  
+
 }
 
 /**
