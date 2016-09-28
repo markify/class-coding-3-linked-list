@@ -34,6 +34,18 @@ void addNode(struct Node *head, int n) {
   temp *current=head;
 
   //TODO - Implement this function.
+    //TODO - Implement this function.
+    Node *current;
+    current = head;
+    while (current->next != NULL){
+        current = current->next;
+
+    }
+
+    Node *newNode = current->next;
+
+    newNode->data = n;
+    newNode->next = NULL;
 
 }
 
