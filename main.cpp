@@ -33,16 +33,15 @@ void addNode(struct Node *head, int n) {
     Node *newNode = new Node;
     Node *current = head;
     while (current) {
-        if (current->next != NULL) {
-            current = current->next;
+        if (current->next == NULL) {
+            newNode->data = n;
+            newNode->next = NULL;
+            current->next = newNode;
+            return;
         }
-        newNode->data = n;
-        newNode->next = NULL;
-        current->next = newNode;
-        return;
-
+        else
+        current = current->next;
     }
-
 }
 
 /**
@@ -200,7 +199,7 @@ int main() {
   if(deleteNode(&head,ptrDelete))
       cout << "Node "<< numDel << " deleted!\n";
   display(head);
-/*
+
   cout << "The list is reversed\n";
   reverse(&head);
   display(head);
@@ -235,6 +234,6 @@ int main() {
   cout << "Deleting the copied list\n";
   deleteLinkedList(&newHead);
   display(newHead);
-   */
+   
   return 0;
 }
