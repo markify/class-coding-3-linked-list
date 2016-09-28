@@ -15,8 +15,10 @@ struct Node {
  * @param head - pointer to the head of the list
  * @param n - data that the first element should hold
  */
-void initNode(struct Node *head, int n) {
+  void initNode(struct Node *head, int n) {
   //TODO: Initiliaze the node data to n and the next pointer to..?
+  head->data = n;
+  head->next =NULL;
 }
 
 /**
@@ -26,6 +28,7 @@ void initNode(struct Node *head, int n) {
  */
 void addNode(struct Node *head, int n) {
   //TODO - Implement this function.
+
 }
 
 /**
@@ -35,6 +38,7 @@ void addNode(struct Node *head, int n) {
  */
 void insertFront(struct Node **head, int n) {
   //TODO
+
 }
 
 /**
@@ -43,6 +47,8 @@ void insertFront(struct Node **head, int n) {
  */
 void display(struct Node *head) {
   //TODO
+
+
 }
 
 /**
@@ -53,7 +59,13 @@ void display(struct Node *head) {
  */
 struct Node *searchNode(struct Node *head, int n) {
   //TODO
-  return NULL;
+  Node *thisNode = head;         //first location in front of node
+  while(thisNode) {              //go to current node
+    if(thisNode->data == n)     //if given data is at this node, return
+      return thisNode;
+    else                        // else go to next node
+    thisNode = thisNode->next;
+  }
 }
 
 /**
