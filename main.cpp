@@ -40,7 +40,7 @@ void addNode(struct Node *head, int n) {
             return;
         }
         else
-        current = current->next;
+            current = current->next;
     }
 }
 
@@ -234,6 +234,6 @@ int main() {
   cout << "Deleting the copied list\n";
   deleteLinkedList(&newHead);
   display(newHead);
-   
+
   return 0;
 }
