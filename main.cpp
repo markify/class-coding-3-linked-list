@@ -18,7 +18,7 @@ struct Node {
   void initNode(struct Node *head, int n) {
   //TODO: Initiliaze the node data to n and the next pointer to..?
   head->data = n;
-  head->next =NULL;
+  head->next = nullptr;
 }
 
 /**
@@ -27,6 +27,12 @@ struct Node {
  * @param n - data that the new node should hold
  */
 void addNode(struct Node *head, int n) {
+  Node *temp= new Node;
+  temp->data;
+  data=n;
+  temp->next= nullptr;
+  temp *current=head;
+
   //TODO - Implement this function.
 
 }
@@ -38,7 +44,7 @@ void addNode(struct Node *head, int n) {
  */
 void insertFront(struct Node **head, int n) {
   //TODO
-
+  node *temp=head;
 }
 
 /**
