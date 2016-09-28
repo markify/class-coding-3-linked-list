@@ -98,6 +98,17 @@ struct Node *searchNode(struct Node *head, int n) {
  */
 bool deleteNode(struct Node **head, Node *ptrDel) {
   //TODO
+    Node *thisNode = *head;
+    while(thisNode) {
+        if (thisNode == ptrDel) {
+            delete ptrDel;
+            return true;
+        } else if (thisNode-> next == ptrDel){
+            delete ptrDel;
+            return true;
+        } else
+            thisNode = thisNode->next;
+    }
 
   return false;
 }
@@ -183,13 +194,13 @@ int main() {
 
   insertFront(&head,5);
   display(head);
-/*
+
   int numDel = 5;
   Node *ptrDelete = searchNode(head,numDel);
   if(deleteNode(&head,ptrDelete))
       cout << "Node "<< numDel << " deleted!\n";
   display(head);
-
+/*
   cout << "The list is reversed\n";
   reverse(&head);
   display(head);
