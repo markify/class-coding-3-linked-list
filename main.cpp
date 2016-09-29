@@ -18,7 +18,7 @@ struct Node {
   void initNode(struct Node *head, int n) {
   //TODO: Initiliaze the node data to n and the next pointer to..?
   head->data = n;
-  head->next = nullptr;
+  head->next =NULL;
 }
 
 /**
@@ -27,12 +27,6 @@ struct Node {
  * @param n - data that the new node should hold
  */
 void addNode(struct Node *head, int n) {
-  Node *temp= new Node;
-  temp->data;
-  data=n;
-  temp->next= nullptr;
-  temp *current=head;
-
   //TODO - Implement this function.
     //TODO - Implement this function.
     Node *current;
@@ -56,7 +50,7 @@ void addNode(struct Node *head, int n) {
  */
 void insertFront(struct Node **head, int n) {
   //TODO
-  node *temp=head;
+
 }
 
 /**
@@ -86,6 +80,8 @@ struct Node *searchNode(struct Node *head, int n) {
   while(thisNode) {              //go to current node
     if(thisNode->data == n)     //if given data is at this node, return
       return thisNode;
+    else                        // else go to next node
+    thisNode = thisNode->next;
   }
 }
 
