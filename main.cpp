@@ -165,7 +165,7 @@ int main() {
 
     initNode(head, 10);
     display(head);
-
+/*
     addNode(head, 20);
     display(head);
 
@@ -180,7 +180,7 @@ int main() {
 
     insertFront(&head, 5);
     display(head);
-/*
+
   int numDel = 5;
   Node *ptrDelete = searchNode(head,numDel);
   if(deleteNode(&head,ptrDelete))
