@@ -80,8 +80,6 @@ struct Node *searchNode(struct Node *head, int n) {
   while(thisNode) {              //go to current node
     if(thisNode->data == n)     //if given data is at this node, return
       return thisNode;
-    else                        // else go to next node
-    thisNode = thisNode->next;
   }
 }
 
