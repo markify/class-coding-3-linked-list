@@ -66,14 +66,12 @@ void insertFront(struct Node **head, int n) {
 void display(struct Node *head) {
   //TODO
   Node *temp=head;
-  while(temp!=NULL){
-    cout << temp->data;
-    if(temp->next!=NULL){
-      temp=temp->next;
+  while(temp){
+    cout << temp->data << " ";
+    temp=temp->next;
     }
-    delete(temp);
-  }
-
+  cout << endl;
+  cout << endl;
 }
 
 /**
@@ -167,10 +165,10 @@ int main() {
   struct Node *newHead;
   struct Node *head = new Node;
 
-  /*
+
   initNode(head,10);
   display(head);
-
+/*
   addNode(head,20);
   display(head);
 
